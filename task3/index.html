@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        font-family: 'Inter', -apple-system, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+      }
+      .login-card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        width: 100%;
+        max-width: 400px;
+      }
+      .login-card h1 {
+        margin: 0 0 24px 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .form-row {
+        margin-bottom: 20px;
+      }
+      .form-row label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      .form-row label .required { color: #e74c3c; }
+      .form-row input {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.2s;
+      }
+      .form-row input:focus {
+        outline: none;
+        border-color: #3498db;
+      }
+      .form-row input::placeholder {
+        color: #999;
+      }
+      .error {
+        font-size: 13px;
+        color: #e74c3c;
+        margin-top: 6px;
+      }
+      .invalid-count {
+        background: #fef2f2;
+        color: #991b1b;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .invalid-count[style*="display: none"] { display: none !important; }
+      button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+        background: #3498db;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover { background: #2980b9; }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="login-card">
+      <h1>Login Form</h1>
+
+      <div id="invalidCount" class="invalid-count" style="display: none;">
+        Wrong submissions: <span id="count">0</span>
+      </div>
+
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <label>Email <span class="required">*</span></label>
+          <input type="text" placeholder="Enter your email" id="email" onchange="return getEmail();" />
+          <p id="emailErr" class="error"></p>
+        </div>
+        <div class="form-row">
+          <label>Password <span class="required">*</span></label>
+          <input type="password" placeholder="Enter your password" id="password" onkeyup="return getPassword();" />
+          <p id="pwdErr" class="error"></p>
+        </div>
+        <div class="form-row">
+          <button type="button" onclick="return collectFormData();">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
