@@ -1,4 +1,8 @@
 <?php
+if (!ini_get('date.timezone')) {
+    date_default_timezone_set('Asia/Dhaka');
+}
+
 session_start();
 
 $action = $_GET['action'] ?? 'register';

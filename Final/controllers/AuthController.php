@@ -53,7 +53,7 @@ class AuthController
         );
 
         $_SESSION['user'] = $data['username'];
-        $_SESSION['login_time'] = date('Y-m-d H:i:s');
+        $_SESSION['login_time'] = date('d M Y, h:i:s A');
 
         header('Location: index.php?action=dashboard');
         exit;
@@ -87,7 +87,7 @@ class AuthController
             return;
         }
 
-        $registeredUser = $this->userModel->getRegisteredUser();
+        $registeredUser = $this->userModel->getUserByEmail($data['email']);
 
         if (!$registeredUser) {
             $errors['general'] = 'No registered user found. Please register first.';
@@ -96,10 +96,9 @@ class AuthController
             return;
         }
 
-        $isValidEmail = strtolower($data['email']) === strtolower($registeredUser['email']);
         $isValidPassword = password_verify($data['password'], $registeredUser['password_hash']);
 
-        if (!$isValidEmail || !$isValidPassword) {
+        if (!$isValidPassword) {
             $errors['general'] = 'Invalid email or password.';
             $old = ['email' => $data['email']];
             include __DIR__ . '/../views/login.php';
@@ -107,7 +106,7 @@ class AuthController
         }
 
         $_SESSION['user'] = $registeredUser['username'];
-        $_SESSION['login_time'] = date('Y-m-d H:i:s');
+        $_SESSION['login_time'] = date('d M Y, h:i:s A');
 
         header('Location: index.php?action=dashboard');
         exit;

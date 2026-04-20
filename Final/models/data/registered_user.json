@@ -1,5 +1,47 @@
-{
-    "username": "demo",
-    "email": "demo@mail.com",
-    "password_hash": "$2y$10$k.8PDA2XiJYh5Y\/qF\/VFAuFnKYVp6wLh.SMQUX\/LBteBfMw8WbSD6"
-}
+[
+    {
+        "username": "abcuser",
+        "email": "abc@mail.com",
+        "password_hash": "$2y$10$J6v1HqSbVybdBp9mMwd.qO6MtdG.ZOos8LZD773hUZMiRKnEgSsgy"
+    },
+    {
+        "username": "userone",
+        "email": "userone@mail.com",
+        "password_hash": "$2y$10$JUnh.SK\/b5dF82OnsbrsM.nvQ24El48JYlgVcIhkwiWUhw91UaDuu"
+    },
+    {
+        "username": "usertwo",
+        "email": "usertwo@mail.com",
+        "password_hash": "$2y$10$mQgC0CLgxjYg43Yh2U31IOzTwNlHp9JhBHw3Vl6.4r6ZHjAzR0w9C"
+    },
+    {
+        "username": "matchuser",
+        "email": "match@mail.com",
+        "password_hash": "$2y$10$hMXzd4xgcoswMe885jwHR.4fwUx6vgFLBmxo..MAQUFuoDFCA2c\/u"
+    },
+    {
+        "username": "cat",
+        "email": "cat@gmail.com",
+        "password_hash": "$2y$10$RSOwvoCDt393\/VzLV6P8jO8dxbNAD07vdBdaY.AhqUvJ6eZa3wf2S"
+    },
+    {
+        "username": "dog",
+        "email": "dog@gmail.com",
+        "password_hash": "$2y$10$vkLtBevE0HF3IALsyq\/Myu1tsOzy\/S1DbLA9VW0FEMvYQo4pT1rVS"
+    },
+    {
+        "username": "bird",
+        "email": "bird@gmail.com",
+        "password_hash": "$2y$10$8XK62PUit1PCpkdT22UonefQhbVR.iTx6ETInlXhnJFsVREG.2w5C"
+    },
+    {
+        "username": "newuserx",
+        "email": "dsa@gmail.com",
+        "password_hash": "$2y$10$PULhXZm4dfc.KCLr93b45.rg2Sz2WkTvmmRL3jKBryh8CKOoUpYdy"
+    },
+    {
+        "username": "testx",
+        "email": "testx@mail.com",
+        "password_hash": "$2y$10$JznPjZ4o0HY7098DICGbp.i9pS50nemih7VQvN\/.Gfqq90yfJqjfq"
+    }
+]
